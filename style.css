@@ -1,0 +1,98 @@
+* {
+    margin:0;
+    padding: 0;
+
+  }
+  html {
+    font-size: 100%;
+    font-family: Verdana, Geneva, sans-serif;
+    line-height: 1.5;
+  }
+  img {
+    width: 100%;
+  }
+  *,*:before,*:after {
+    box-sizing: border-box;
+  }
+  h1 {
+    font-size: 2.5em;
+    text-align: center;
+    letter-spacing: .1em;
+    color: #036DA7;
+    text-shadow: 1px 1px 2px #000,
+                  2px 2px #666,
+                  3px 3px 5px #999;
+    }
+  h2 {
+    font-size: 1.5em;
+    line-height: 1.5;
+  }
+  .container {
+    padding: 10px;
+    display: grid;
+    column-gap: 40px;   /*this was grid-column-gap but it had a strikethrough*/
+    grid-template-areas: 
+        "content"
+        "facts";
+  }
+  .main-content{
+    grid-area: content;
+    padding: 0 10px;
+  }
+  .main-content p {
+    padding-bottom: 20px;
+    }
+  .facts {
+    background-color: #ededed;
+    grid-area: facts;
+    padding: 10px;
+  }
+  .facts img {
+    padding-top: 20px;
+  }
+  .facts h2 {
+    border-bottom: 1px solid #fff;
+  }
+  .facts p {
+    margin-top: 15px;
+  }  
+  .main-footer {
+    background-color: #036DA7;
+    color: #fff9d6;
+    text-align: center;
+    padding: 10px;
+  }
+  @media (min-width: 550px){
+    h1{
+        font-size: 4em;
+    }
+  }
+  @media(min-width: 750px){
+    html{
+        background-color: #ccc;
+    }
+    .container{
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "content facts";
+    }
+    header{
+        background-color: #036da7;
+        background-image: url(images/whaleShark03.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;   /*This used to be -webkit-background-size but it also had a strikethrough */
+        background-position: right;
+    }
+    header h1{
+        font-size: 3.5em;
+        color: #ff9;
+        text-shadow: 1px 1px 2px #fff,
+                    2px 2px #666,
+                    3px 3px 5px #999;
+                    padding-left: 20px;
+                    text-align: left;
+    }  
+    .main-content img{
+        width: 50%;
+        padding: 0 20px 20px 0;
+    } 
+  }
